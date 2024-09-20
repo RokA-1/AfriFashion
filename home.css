@@ -1,0 +1,129 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Poppins', sans-serif, Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+
+.container{
+    min-height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgb(255, 138, 138,0.7),rgb(240, 234, 172, 0.7)), url("background.jpg");
+    background-position: center;
+    background-size: cover;
+    padding: auto;
+}
+nav{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px 0;
+    background-color: #FF8A8A;
+}
+
+.logo{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 40px;
+    font-weight: bold;
+    letter-spacing: 1.5px;
+    line-height: 60px;
+    padding: 0 100px;
+    color: white;
+    cursor: pointer;
+}
+
+.logo.active, .logo:hover{
+    color: #b9dd7f;
+}
+nav ul{
+    float: right;
+    margin-right: 20px;
+    padding: 0 100px;
+}
+nav ul li{
+    display: inline-block;
+    margin: 0 5px;
+    line-height: 60px;
+    list-style: none;
+    position: relative;
+}
+
+nav ul li a{
+    text-decoration: none;
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+    padding: 7px 13px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+nav ul li::after{
+    content: '';
+    width: 0;
+    height: 3px;
+    background: #b9dd7f;
+    position: absolute;
+    left: 0;
+    bottom: 10px;
+    transition: 0.5s;
+}
+nav ul li:hover::after{
+    width: 100%;
+}
+
+a.active, a:hover{
+    color: #b9dd7f;
+}
+
+.content{
+    width: 100%;
+    top: 50%;
+    position: absolute;
+    transform: translateY(-50%);
+    text-align: center;
+    color: white;
+}
+
+.content h1{
+    font-size: 60px;
+    margin-top: 60px;
+
+}
+.content p{
+    margin: 20px auto;
+    font-weight: bold;
+    line-height: 25px;
+}
+
+.btn{
+    width: 200px;
+    padding: 15px 0;
+    margin: 20px 10px;
+    background: transparent;
+    color: white;
+    font-weight: bold;
+    text-align: center;
+    border: 3px solid #b9dd7f;
+    border-radius: 25px;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+}
+.hover-effect{
+    border-radius: 25px;
+    background-color: #b9dd7f;
+    height: 100%;
+    width: 0;
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    z-index: -1;
+    transition: 0.5s
+}
+.btn:hover .hover-effect{
+    width: 100%;
+}
+.btn:hover{
+    border: none;
+}
